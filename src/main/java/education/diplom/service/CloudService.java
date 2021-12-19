@@ -51,7 +51,7 @@ public class CloudService {
         var root = "files/";
         try{
             var q =SecurityContextHolder.getContext().getAuthentication().getAuthorities().stream().findFirst().get();
-            var w =SecurityContextHolder.getContext().getAuthentication().;
+            var w =SecurityContextHolder.getContext().getAuthentication();
             System.out.println(q);
             System.out.println(q.getAuthority());
         } catch (Exception e){
@@ -68,7 +68,7 @@ public class CloudService {
     }
 
     public LoginMsg autorisation(String login, String password) {
-        return null;
+        return new LoginMsg("Token");
     }
 
     public String logout(String authToken) {

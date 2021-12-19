@@ -27,6 +27,7 @@ public class CloudController {
 
     @PostMapping("/login")
     public LoginMsg autorisation(@RequestBody String login, @RequestBody String password) {
+        System.out.println(login+"   "+ password);
         return cloudService.autorisation(login, password);
     }
 
